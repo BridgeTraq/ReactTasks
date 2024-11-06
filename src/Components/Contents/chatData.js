@@ -1,19 +1,19 @@
 export const barChartData = {
     labels: [
-        'Sun 15',
-        '',
-        '',
-        '',
-        '',
-        '',
-        'Sat 20',
+        'Su 15',
+        ' ',
+        ' ',
+        ' ',
+        ' ',
+        ' ',
+        'Sa 20',
     ],
     datasets: [
         {
             label: '',
-            data: [10, 18, 6, 26, 18, 10, 17],
+            data: [12, 20, 8, 28, 20, 12, 19],
             backgroundColor: '#054743',
-            borderRadius: 4.5
+            borderRadius: 5
         },
     ],
 }
