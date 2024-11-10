@@ -6,17 +6,17 @@ import { LiaCertificateSolid, LiaFigma, LiaGraduationCapSolid } from 'react-icon
 import { MdOutlinePlayLesson } from "react-icons/md";
 import { FaArrowRight } from "react-icons/fa6";
 import { BsThreeDotsVertical } from "react-icons/bs";
-import { SiCodesignal } from "react-icons/si";
 import { TbUxCircle } from "react-icons/tb";
 import { FaCheck } from "react-icons/fa6";
 import { GrInProgress } from "react-icons/gr";
-import { IoIosArrowForward } from "react-icons/io";
 import { MdAnimation } from "react-icons/md";
 import { GiGearStickPattern } from "react-icons/gi";
 import { GiNetworkBars } from "react-icons/gi";
 import { FaRegClock } from "react-icons/fa6";
 import { FaStar } from "react-icons/fa6";
 import Charts from './Charts'
+import CourseDuration from './CourseDuration'
+import { SiCodesignal } from 'react-icons/si'
 
 function Home() {
     return (
@@ -43,77 +43,42 @@ function Home() {
                             <h1 className='text-[#9999a9] font-bold'>Status</h1>
                         </div>
 
-                        <div className='flex justify-between items-center px-3 py-2 border-b-[2px] border-dashed '>
-                            <div className='flex items-center gap-3'>
-                                <span className='bg-[#2dd5ff] h-[32px] w-[32px] text-white rounded-md flex justify-center items-center'><SiCodesignal /></span>
-                                <div>
-                                    <h1 className='font-bold text-sm'>Design Accessibility</h1>
-                                    <p className='text-[#9999a9] text-sm'>Advanced * 5 hours</p>
-                                </div>
-                            </div>
+                        <CourseDuration
+                            logo={<SiCodesignal />}
+                            header='Design Accessibility'
+                            title='Advanced * 5 hrs'
+                            bg={{ backgroundColor: '#2dd5ff' }}
+                            id='1'
+                            firsthw={{ height: '6px', width: '160px' }}
+                            secondhw={{ height: '6px', width: '30%' }}
+                            label='30%'
+                            progressLogo={<GrInProgress />}
+                            progressLabel='In Progress' />
 
-                            <div className='flex gap-1 items-center text-sm'>
-                                <div className='h-[6px] w-[160px] bg-[#f8f9fb] rounded-full'>
-                                    <span className='h-[6px] bg-[#1d877d] w-[60px] rounded-full block'></span>
-                                </div>
-                                <span className='text-[#9999a9]'>30%</span>
-                            </div>
+                        <CourseDuration
+                            logo={<TbUxCircle />}
+                            header='UX Research'
+                            title='Intermediate * 6 hrs'
+                            bg={{ backgroundColor: '#8356fe' }}
+                            id='1'
+                            firsthw={{ height: '6px', width: '160px' }}
+                            secondhw={{ height: '6px', width: '70%' }}
+                            label='70%'
+                            progressLogo={<GrInProgress />}
+                            progressLabel='In Progress' />
 
-                            <button className='text-[#9999a9] flex items-center gap-2 border-[1px] text-sm rounded-md p-1'>
-                                <GrInProgress className='text-[#fd9c84]' />
-                                <span>In Progress</span>
-                            </button>
-
-                            <IoIosArrowForward className='text-[#9999a9]' />
-                        </div>
-
-                        <div className='flex justify-between items-center px-3 py-2 border-b-[2px] border-dashed '>
-                            <div className='flex items-center gap-3'>
-                                <span className='bg-[#8356fe] h-[32px] w-[32px] text-white rounded-md flex justify-center items-center'><TbUxCircle /></span>
-                                <div>
-                                    <h1 className='font-bold text-sm'>UX Research</h1>
-                                    <p className='text-[#9999a9] text-sm'>Intermediate * 6 hours</p>
-                                </div>
-                            </div>
-
-                            <div className='flex ml-[-10px] gap-1 items-center text-sm'>
-                                <div className='h-[6px] w-[160px] bg-[#f8f9fb] rounded-full'>
-                                    <span className='h-[6px] bg-[#1d877d] w-[120px] rounded-full block'></span>
-                                </div>
-                                <span className='text-[#9999a9]'>70%</span>
-                            </div>
-
-                            <button className='text-[#9999a9] flex items-center gap-2 border-[1px] text-sm rounded-md p-1'>
-                                <GrInProgress className='text-[#fd9c84]' />
-                                <span>In Progress</span>
-                            </button>
-
-                            <IoIosArrowForward className='text-[#9999a9]' />
-                        </div>
-
-                        <div className='flex justify-between items-center px-3 py-2'>
-                            <div className='flex items-center gap-3'>
-                                <span className='bg-[#000000] h-[32px] w-[32px] text-white rounded-md flex justify-center items-center'><LiaFigma /></span>
-                                <div>
-                                    <h1 className='font-bold text-sm'>Figma for Beginner</h1>
-                                    <p className='text-[#9999a9] text-sm'>Beginner * 7 hours</p>
-                                </div>
-                            </div>
-
-                            <div className='flex gap-1 items-center text-sm'>
-                                <div className='h-[6px] w-[160px] bg-[#f8f9fb] rounded-full'>
-                                    <span className='h-[6px] bg-[#1d877d] w-[160px] rounded-full block'></span>
-                                </div>
-                                <span className='text-[#9999a9]'>100%</span>
-                            </div>
-
-                            <button className='text-[#9999a9] flex items-center gap-2 border-[1px] text-sm rounded-md p-1'>
-                                <FaCheck className='text-[#8acadb]' />
-                                <span>Completed</span>
-                            </button>
-
-                            <IoIosArrowForward className='text-[#9999a9]' />
-                        </div>
+                        <CourseDuration
+                            logo={<LiaFigma />}
+                            header='Figma for Beginner'
+                            title='Beginner * 7 hrs'
+                            bg={{ backgroundColor: '#000000' }}
+                            id='1'
+                            firsthw={{ height: '6px', width: '160px' }}
+                            secondhw={{ height: '6px', width: '100%' }}
+                            label='100%'
+                            progressLogo={<FaCheck />}
+                            progressLabel='Completed'
+                            changeLogo='true' />
                     </div>
                 </div>
 

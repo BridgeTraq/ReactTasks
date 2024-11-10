@@ -12,7 +12,7 @@ function Layout() {
             </div>
             <div className="w-full h-full">
                 <Header />
-                <Outlet className='bg-[]' />
+                <Outlet />
             </div>
         </div>
     )
